@@ -5,9 +5,9 @@ const Header = ({handleCompletedTasks, handleTasks, handleIcompletedTasks}) => {
 
 
     return (
-        <header className=' bg-gradient-to-r from-green-200 via-green-400 to-green-200 w-full  flex flex-col items-center justify-center space-y-5 font-serif font-medium py-2' >
+        <header className=' bg-gradient-to-r from-green-600 via-green-400 to-green-600 w-full  flex flex-col items-center justify-center space-y-5 font-serif font-medium py-2' >
 
-            <h1  className=' text-center text-6xl font-medium'>¡ToDo!</h1>
+            <h1  className=' text-center text-6xl font-medium text-white'>¡ToDo!</h1>
 
             <div className=' flex flex-row space-x-10'>
                <Button title='Completadas' handleClick={handleCompletedTasks}/>

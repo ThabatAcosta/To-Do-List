@@ -92,7 +92,7 @@ const handleClickCard = (id, completed ) => {
 
 //return de todo el componente
   return (
-    <div className=" w-full h-screen space-y-3 " >
+    <div className=" w-full h-screen space-y-3 bg-gradient-to-r from-green-600 via-green-400 to-green-600" >
 
       <Header 
          handleCompletedTasks={handleCompletedTasks}   
@@ -102,7 +102,7 @@ const handleClickCard = (id, completed ) => {
 
       {/* Condicional para mostrar la card, luego del evento onclick  */}
 
-    <div className=' w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 pl-6'>
+    <div className=' w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 pl-6 bg-gradient-to-r from-green-600 via-green-400 to-green-600'>
 
       {isCompleted && <>
         { 
