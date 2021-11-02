@@ -92,7 +92,7 @@ const handleClickCard = (id, completed ) => {
 
 //return de todo el componente
   return (
-    <div className=" bg-purple-500 w-screen h-screen justify-between" >
+    <div className=" w-full h-screen space-y-6 " >
 
       <Header 
          handleCompletedTasks={handleCompletedTasks}   
@@ -102,8 +102,9 @@ const handleClickCard = (id, completed ) => {
 
       {/* Condicional para mostrar la card, luego del evento onclick  */}
 
-      <div>
-      {isCompleted && <div>
+    <div className=' w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4'>
+
+      {isCompleted && <>
         { 
          filterCompleted.map((todo, i) => (
             <Card key={todo} 
@@ -111,10 +112,10 @@ const handleClickCard = (id, completed ) => {
                   handleClick={handleClickCard}/>
             ))
         }  
-        </div>}
+        </>}
 
 
-      {isInCompleted && <div>
+      {isInCompleted && <>
         {
         filterInCompleted.map((todo, i) => (
           <Card key={todo} 
@@ -123,10 +124,10 @@ const handleClickCard = (id, completed ) => {
             ))
         
         }
-        </div>}
+        </>}
       
       
-      {isTasks && <div>
+      {isTasks && <>
         { 
          tasks.length > 1 && 
          tasks.map((todo, i) => (
@@ -137,13 +138,13 @@ const handleClickCard = (id, completed ) => {
         }  
         
     
-        </div>}
+        </>}
 
 
 
 
-      </div>
     </div>
+  </div>
   )
 }
 
